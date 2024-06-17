@@ -1,0 +1,655 @@
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', sans-serif;
+		}
+		.header{
+			min-height: 100vh;
+			width: 100%;
+			background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.webp);
+			background-position: center;
+			background-size: cover;
+			position: relative;
+			overflow: ;
+		}
+
+		nav{
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 135px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #4b0082, #8a2be2);
+    display: block;
+    margin: auto;
+    transition: .5s;    
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    background: linear-gradient(90deg, #4b0082, #8a2be2);
+}
+nav .fa{
+    display: none;
+}
+
+		.text-box{
+			width: 90%;
+			color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+		.text-box h1{
+			font-size: 62px;
+		}
+		.text-box p{
+			margin: 20px 0 40px;
+			font-size: 14px;
+			color: #fff;
+		}
+		.hero-btn {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			padding: 12px 34px;
+			font-size: 13px;
+			background: black; /* Background color of the button */
+			border-radius: 30px; /* Rounded corners */
+			position: relative;
+			cursor: pointer;
+			text-align: center;
+			transition: background 0.3s ease;
+			overflow: ; /* Ensure the gradient border follows the rounded corners */
+		}
+
+		.hero-btn::before {
+			content: '';
+			position: absolute;
+			top: -3px; /* Increase to make the gradient border thicker */
+			left: -3px; /* Increase to make the gradient border thicker */
+			right: -3px; /* Increase to make the gradient border thicker */
+			bottom: -3px; /* Increase to make the gradient border thicker */
+			border-radius: inherit; /* Ensure the gradient border follows the button's border radius */
+			background: linear-gradient(45deg, blue, purple); /* Gradient border */
+			z-index: -1; /* Place behind the button content */
+		}
+
+		.hero-btn:hover {
+			background: #454545; /* Darker background on hover */
+		}
+
+
+
+
+
+
+
+@media(max-width: 700px) {
+    .nav-links {
+        position: fixed;
+        background: #1a1a1a; /* Darker, modern background color */
+        height: 100vh;
+        width: 250px; /* Increased width for more space */
+        top: 0;
+        right: -250px; /* Adjust according to the new width */
+        text-align: left;
+        z-index: 2;
+        transition: right 0.4s ease-in-out; /* Smooth transition */
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Add shadow for depth */
+    }
+    .nav-links ul {
+        padding: 50px 20px; /* More padding for better spacing */
+        user-select: none; /* Prevent text selection */
+    }
+    .nav-links ul li {
+        display: block;
+        margin: 20px 0; /* Add margin for spacing between items */
+    }
+    .nav-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px; /* Larger font size for better readability */
+        transition: color 0.3s; /* Smooth transition for hover effect */
+        user-select: none; /* Prevent text selection */
+        outline: none; /* Remove blue outline on focus */
+    }
+    .nav-links ul li a:focus {
+        outline: none; /* Ensure blue outline is removed on focus */
+    }
+    .nav-links ul li a:hover {
+        color: #fff; /* Modern hover color */
+    }
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px 20px; /* Adjusted for better spacing */
+        font-size: 22px;
+        cursor: pointer; 
+        user-select: none; /* Prevent text selection */
+        outline: none; /* Remove blue outline on focus */
+    }
+    nav .fa:focus {
+        outline: none; /* Ensure blue outline is removed on focus */
+    }
+    .nav-links.active {
+        right: 0; /* Make the sidebar visible */
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #fff;
+        user-select: none; /* Prevent text selection */
+        outline: none; /* Remove blue outline on focus */
+    }
+    .close-btn:focus {
+        outline: none; /* Ensure blue outline is removed on focus */
+    }
+}
+
+
+
+
+
+		/*---------- purchase --------*/
+
+		.purchase{
+			width: 80%;
+			margin: auto;
+			text-align: center;
+			padding-top: 100px;
+		}
+		h1{
+			font-size: 36px;
+			font-weight: 600;
+		}
+		p{
+			color: #777;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 22px;
+			padding: 10px;
+			
+		}
+		.row{
+			margin-top: 5%;
+			display: flex;
+			justify-content: space-between;  
+		}
+		  
+		.purchase .purchase-col {
+			background: #f4f4f4;
+			padding: 20px;
+			border-radius: 25px;
+			box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+			width: 300px;
+		}
+		h3{
+			text-align: center;
+			font-weight: 600;
+			margin: 10px 0;
+		}
+		@keyframes gradientBoxShadow {
+			0% {
+				box-shadow: 
+					0 0 20px rgba(110, 0, 255, 0.5),
+					0 0 15px rgba(110, 0, 255, 0.5),
+					0 0 10px rgba(0, 234, 255, 0.5),
+					0 0 5px rgba(0, 234, 255, 0.5);
+			}
+			50% {
+				box-shadow: 
+					0 0 20px rgba(0, 234, 255, 0.5),
+					0 0 15px rgba(0, 234, 255, 0.5),
+					0 0 10px rgba(110, 0, 255, 0.5),
+					0 0 5px rgba(110, 0, 255, 0.5);
+			}
+			100% {
+				box-shadow: 
+					0 0 20px rgba(110, 0, 255, 0.5),
+					0 0 15px rgba(110, 0, 255, 0.5),
+					0 0 10px rgba(0, 234, 255, 0.5),
+					0 0 5px rgba(0, 234, 255, 0.5);
+			}
+		}
+
+		.purchase-col:hover {
+			animation: gradientBoxShadow 3s infinite alternate;
+		}
+
+
+		@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+        align-items: center; /* Center the boxes horizontally */
+    }
+    .purchase-col {
+        margin-bottom: 20px; /* Add more space between each box */
+        width: 90%; /* Adjust width to make boxes not too wide on small screens */
+    }
+}
+
+
+
+
+		/*-------- Call To Action ----------*/
+
+
+		.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/background2.webp);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+		.cta h1{
+			color: #fff;
+			margin-bottom: 40px; 
+			padding: 0; 
+		}
+
+		@media(max-width:700px){
+			.cta h1{
+				font-size: 24px;
+			}
+		}
+
+		/*--------------Footer---------------*/
+
+		.footer{
+			width: 100%;
+			text-align: center;
+			padding: 30px 0;
+		}
+		.footer h4{
+			margin-bottom: 25px;
+			margin-top: 20px;
+			font-weight: 600;
+		}
+
+		.icons .fa{
+			color: #4B0082;
+			margin: 0 13px;
+			cursor: pointer;
+			padding: 18px 0;
+		}
+		.fa-heart-o{
+			color: #4B0082;
+		}
+
+
+		/*------- General Styles ------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: black;
+}
+
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe {
+    width: 100%;
+}
+
+.contact-us {
+    width: 80%;
+    margin: auto;
+}
+
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa {
+    font-size: 28px;
+    color: #4B0082;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p {
+    padding: 0;
+}
+
+.contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #777;
+}
+
+/* Custom styles for the new section */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.feature-box {
+    background: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: background 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: #666;
+    font-size: 1.2em;
+}
+
+.feature-box:hover {
+    background: #e0e0e0;
+}
+
+.checklist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checklist div {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.checklist div i {
+    margin-right: 10px;
+    color: #4caf50;
+}
+
+h1, h2, h4 {
+    color: #;
+}
+
+p {
+    color: #555;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: ;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #f5f5f5;
+}
+
+.footer .icons i {
+    margin: 0 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+/*--------------- About Us Page --------------*/
+
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/tool.webp);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1 {
+    margin-top: 100px;
+}
+
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col h1 {
+    padding-top: 0;
+}
+
+.about-col p {
+    padding: 15px 0 25px;
+}
+
+.hero-btn.red-btn {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			padding: 12px 34px;
+			font-size: 13px;
+			background: black;
+			border-radius: 30px;
+			position: relative;
+			cursor: pointer;
+			text-align: center;
+			transition: background 0.3s ease;
+			overflow: ;
+			border: 2px solid transparent;
+		}
+
+		.hero-btn.red-btn::before {
+			content: '';
+			position: absolute;
+			top: -4px; /* Increased gradient border thickness */
+			left: -4px; /* Increased gradient border thickness */
+			right: -4px; /* Increased gradient border thickness */
+			bottom: -4px; /* Increased gradient border thickness */
+			border-radius: inherit;
+			background: linear-gradient(45deg, blue, purple);
+			z-index: -1;
+		}
+
+		.hero-btn.red-btn:hover {
+			background: black;
+			color: #fff;
+		}
+
+		.hero-btn.red-btn::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: inherit;
+			background: black;
+			z-index: -2;
+		}
+
+.content-image {
+    flex-basis: 50%;
+}
+
+.about-col img {
+    width: 100%;
+}
+
+
+		/*------- Contact Us Page ------------*/
+
+		.location{
+			width: 80%;
+			margin: auto;
+			padding: 80px 0;
+		}
+		.location iframe{
+			width: 100%;
+		}
+
+		.contact-us{
+			width: 80%;
+			margin: auto;
+		}
+		.contact-col{
+			flex-basis: 48%;
+			margin-bottom: 30px;
+		}
+
+		.contact-col div{
+			display: flex;
+			align-items: center;
+			margin-bottom: 40px;
+		}
+
+		.contact-col div .fa{
+			font-size: 28px;
+			color: #4B0082;
+			margin: 10px;
+			margin-right: 30px;
+		}
+			
+		.contact-col div p{
+			padding: 0;
+		}
+		.contact-col div h5{
+			font-size: 20px;
+			margin-bottom: 5px;
+			color: #555;
+			font-weight: 400;
+			
+		}
+		.contact-col input, .contact-col textarea{
+			width: 100%;
+			padding: 15px;
+			margin-bottom: 17px;
+			outline: none;
+			border: 1px solid #ccc;
+		}
+
+		.footer-link{
+			text-decoration: none;
+			color: #777;
+		}
+
+		/*------- Custom Scrollbar -------*/
+
+::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Background color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, blue, purple); /* Gradient for the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners of the scrollbar thumb */
+    border: 3px solid #f4f4f4; /* Padding around the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, purple, blue); /* Gradient for the scrollbar thumb on hover */
+}
+
+
+* {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 
+                 0 0 10px rgba(255, 255, 255, 0.2), 
+                 0 0 15px rgba(255, 255, 255, 0.2), 
+                 0 0 20px rgba(255, 255, 255, 0.2), 
+                 0 0 25px rgba(255, 255, 255, 0.2), 
+                 0 0 30px rgba(255, 255, 255, 0.2), 
+                 0 0 35px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+
